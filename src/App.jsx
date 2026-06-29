@@ -10,9 +10,9 @@ import Project from "./components/Projectpage";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-import BioData from "./components/BioData";
+import BioData from "./components/biodata";
 import CertificatePage from "./components/CertificatePage";
-import ChatBot from "./components/ChatBot";
+import ChatBot from "./components/Chatbot";
 import Loader from "./components/Loader";
 
 function Home() {
@@ -32,83 +32,49 @@ function Home() {
 }
 
 function App() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
-    const timer = setTimeout(() => {
-
-      setLoading(false);
-
-    }, 2500); // 2.5 seconds
-
-    return () => clearTimeout(timer);
-
-  }, []);
-
-  useEffect(() => {
-
     const lenis = new Lenis({
-
-      duration:1.3,
-
-      smoothWheel:true,
-
-      wheelMultiplier:1,
-
-      touchMultiplier:2,
-
-      infinite:false,
-
-      lerp:0.08,
-
+      duration: 1.3,
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
+      lerp: 0.08,
     });
 
-    function raf(time){
-
+    function raf(time) {
       lenis.raf(time);
-
       requestAnimationFrame(raf);
-
     }
 
     requestAnimationFrame(raf);
 
-    return ()=>{
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
 
+    return () => {
+      clearTimeout(timer);
       lenis.destroy();
-
     };
-
   }, []);
 
   if (loading) {
-
     return <Loader />;
-
   }
 
   return (
-
     <Routes>
-
       <Route path="/" element={<Home />} />
-
-      <Route
-        path="/biodata"
-        element={<BioData />}
-      />
-
+      <Route path="/biodata" element={<BioData />} />
       <Route
         path="/CertificatePage"
         element={<CertificatePage />}
       />
-
     </Routes>
-
   );
-
 }
 
 export default App;
