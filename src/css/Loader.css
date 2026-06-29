@@ -1,0 +1,983 @@
+/* ==========================================
+GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ==========================================
+RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+}
+
+/* ==========================================
+LOADER PAGE
+========================================== */
+
+.loader-page{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#070707;
+
+    z-index:999999;
+
+}
+
+/* ==========================================
+BACKGROUND GRADIENT
+========================================== */
+
+.loader-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(141,1,0,.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(255,255,255,.03),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(141,1,0,.08),
+            transparent 60%
+        );
+
+}
+
+/* ==========================================
+ANIMATED GRID
+========================================== */
+
+.loader-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        );
+
+    background-size:60px 60px;
+
+    opacity:.45;
+
+    animation:gridMove 18s linear infinite;
+
+}
+
+/* ==========================================
+RED GLOW
+========================================== */
+
+.loader-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    pointer-events:none;
+
+}
+
+.glow-1{
+
+    width:420px;
+
+    height:420px;
+
+    background:#8D0100;
+
+    top:-120px;
+
+    left:-120px;
+
+    opacity:.35;
+
+    animation:floatGlow1 9s ease-in-out infinite;
+
+}
+
+.glow-2{
+
+    width:320px;
+
+    height:320px;
+
+    background:#ffffff;
+
+    bottom:-80px;
+
+    right:-80px;
+
+    opacity:.08;
+
+    animation:floatGlow2 12s ease-in-out infinite;
+
+}
+
+/* ==========================================
+FLOATING PARTICLES
+========================================== */
+
+.loader-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        radial-gradient(circle,#ffffff22 1.2px,transparent 1.2px);
+
+    background-size:90px 90px;
+
+    opacity:.6;
+
+    animation:particleMove 22s linear infinite;
+
+}
+
+/* ==========================================
+ANIMATIONS
+========================================== */
+
+@keyframes gridMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(60px);
+
+    }
+
+}
+
+@keyframes particleMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-90px);
+
+    }
+
+}
+
+@keyframes floatGlow1{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(60px,80px)
+        scale(1.15);
+
+    }
+
+    100%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+}
+
+@keyframes floatGlow2{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-80px,-60px)
+        scale(.9);
+
+    }
+
+    100%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+}
+/* ==========================================
+LOADER CONTENT
+========================================== */
+
+.loader-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:min(460px,92vw);
+
+    padding:60px 45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    border-radius:36px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.03)
+        );
+
+    backdrop-filter:blur(30px);
+
+    -webkit-backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.45),
+
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+TOP SHINE
+========================================== */
+
+.loader-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-40%;
+
+    width:180%;
+
+    height:180%;
+
+    background:
+        linear-gradient(
+
+            120deg,
+
+            transparent,
+
+            rgba(255,255,255,.08),
+
+            transparent
+
+        );
+
+    transform:rotate(20deg);
+
+    animation:glassShine 6s linear infinite;
+
+}
+
+/* ==========================================
+LOGO
+========================================== */
+
+.loader-circle{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    margin-bottom:28px;
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #8D0100,
+
+            #d40000
+
+        );
+
+    box-shadow:
+
+        0 0 45px rgba(141,1,0,.45),
+
+        inset 0 1px 10px rgba(255,255,255,.2);
+
+    animation:
+
+        logoFloat 4s ease-in-out infinite,
+
+        logoRotate 8s linear infinite;
+
+}
+
+/* Rotating Ring */
+
+.loader-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    animation:ringRotate 8s linear infinite;
+
+}
+
+/* Second Ring */
+
+.loader-circle::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-22px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(255,255,255,.08);
+
+    animation:ringRotateReverse 14s linear infinite;
+
+}
+
+.loader-circle span{
+
+    color:#fff;
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    letter-spacing:-2px;
+
+}
+
+/* ==========================================
+NAME
+========================================== */
+
+.loader-name{
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    letter-spacing:-3px;
+
+    color:#fff;
+
+    margin-bottom:8px;
+
+    animation:nameReveal 1.5s ease;
+
+}
+
+/* ==========================================
+SUBTITLE
+========================================== */
+
+.loader-subtitle{
+
+    color:rgba(255,255,255,.68);
+
+    font-size:1rem;
+
+    letter-spacing:.35em;
+
+    text-transform:uppercase;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================================
+ANIMATIONS
+========================================== */
+
+@keyframes logoFloat{
+
+    0%,100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-12px);
+
+    }
+
+}
+
+@keyframes logoRotate{
+
+    from{
+
+        rotate:0deg;
+
+    }
+
+    to{
+
+        rotate:360deg;
+
+    }
+
+}
+
+@keyframes ringRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes ringRotateReverse{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+@keyframes glassShine{
+
+    0%{
+
+        transform:
+        translateX(-100%)
+        rotate(20deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateX(120%)
+        rotate(20deg);
+
+    }
+
+}
+
+@keyframes nameReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+/* ==========================================
+PROGRESS LINE
+========================================== */
+
+.loader-line{
+
+    position:relative;
+
+    width:100%;
+
+    height:6px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    margin-bottom:35px;
+
+}
+
+/* Filled Line */
+
+.loader-progress{
+
+    position:absolute;
+
+    inset:0;
+
+    width:35%;
+
+    border-radius:inherit;
+
+    background:linear-gradient(
+        90deg,
+        #8D0100,
+        #ff4040,
+        #ffffff,
+        #ff4040,
+        #8D0100
+    );
+
+    background-size:300%;
+
+    .loader-progress{
+
+    height:100%;
+
+    border-radius:999px;
+
+    transition:width .35s ease;
+
+    background:linear-gradient(
+        90deg,
+        #8D0100,
+        #ff4040,
+        #ffffff,
+        #ff4040,
+        #8D0100
+    );
+
+    background-size:300%;
+
+    animation:progressGlow 3s linear infinite;
+
+}
+.loader-percent{
+
+    margin-top:18px;
+
+    font-size:3.8rem;
+
+    font-weight:900;
+
+    color:white;
+
+    letter-spacing:-3px;
+
+    font-variant-numeric:tabular-nums;
+
+}
+
+.loader-text{
+
+    margin-top:10px;
+
+    color:rgba(255,255,255,.6);
+
+    letter-spacing:.35em;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+}
+
+/* Moving Glow */
+
+.loader-progress::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-30px;
+
+    top:-7px;
+
+    width:26px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:white;
+
+    filter:blur(10px);
+
+}
+
+/* ==========================================
+LOADING TEXT
+========================================== */
+
+.loader-text{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:3px;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.loader-text span{
+
+    opacity:.2;
+
+    animation:dotBlink 1.2s infinite;
+
+}
+
+.loader-text span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.loader-text span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+/* ==========================================
+BOTTOM FOOTER
+========================================== */
+
+.loader-footer{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:45px;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,255,255,.28);
+
+    font-size:.85rem;
+
+    letter-spacing:.35em;
+
+    text-transform:uppercase;
+
+    animation:footerFade 3s ease-in-out infinite;
+
+}
+
+/* ==========================================
+SOFT VIGNETTE
+========================================== */
+
+.loader-page .vignette{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 40%,
+
+            rgba(0,0,0,.45) 100%
+
+        );
+
+}
+
+/* ==========================================
+ANIMATIONS
+========================================== */
+
+@keyframes progressMove{
+
+    0%{
+
+        left:-35%;
+
+    }
+
+    100%{
+
+        left:100%;
+
+    }
+
+}
+
+@keyframes progressGlow{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:300%;
+
+    }
+
+}
+
+@keyframes dotBlink{
+
+    0%,80%,100%{
+
+        opacity:.2;
+
+        transform:translateY(0);
+
+    }
+
+    40%{
+
+        opacity:1;
+
+        transform:translateY(-2px);
+
+    }
+
+}
+
+@keyframes footerFade{
+
+    0%,100%{
+
+        opacity:.25;
+
+        letter-spacing:.35em;
+
+    }
+
+    50%{
+
+        opacity:.7;
+
+        letter-spacing:.45em;
+
+    }
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .loader-content{
+
+        width:92%;
+
+        padding:45px 24px;
+
+        border-radius:26px;
+
+    }
+
+    .loader-circle{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .loader-circle span{
+
+        font-size:2.5rem;
+
+    }
+
+    .loader-name{
+
+        font-size:2.2rem;
+
+    }
+
+    .loader-subtitle{
+
+        font-size:.75rem;
+
+        letter-spacing:.25em;
+
+        margin-bottom:35px;
+
+    }
+
+    .loader-line{
+
+        height:5px;
+
+    }
+
+    .loader-text{
+
+        font-size:.75rem;
+
+        letter-spacing:.18em;
+
+    }
+
+    .loader-footer{
+
+        width:100%;
+
+        padding:0 20px;
+
+        text-align:center;
+
+        font-size:.65rem;
+
+        letter-spacing:.18em;
+
+        bottom:28px;
+
+    }
+
+    .loader-grid{
+
+        background-size:40px 40px;
+
+    }
+
+}

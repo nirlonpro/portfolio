@@ -1,0 +1,203 @@
+.story-wrapper{
+    height:350vh;
+    position:relative;
+    background:#f5f3ef;
+}
+
+.story-sticky{
+    position:sticky;
+    top:0;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:0 8%;
+}
+
+.story-text{
+    max-width:1400px;
+
+    /* font-size:clamp(2.5rem,4vw,5rem); */
+    font-size:50px;
+
+    line-height:1.35;
+    font-weight:700;
+
+    text-align:center;
+text-align: justify;
+    letter-spacing:-0.04em;
+}
+
+/* INACTIVE WORDS */
+
+.word{
+    color:rgba(0,0,0,0.18);
+
+    opacity:.35;
+
+    filter:blur(2px);
+
+    transition:
+        color .45s ease,
+        opacity .45s ease,
+        filter .45s ease;
+}
+
+/* ACTIVE WORDS */
+
+.word.active{
+    color:#8D0100;
+
+    opacity:1;
+
+    filter:blur(0);
+}
+
+/* FINISH SECTION */
+
+.end-section{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#fff;
+}
+
+.end-section h2{
+    font-size:clamp(4rem,8vw,8rem);
+
+    font-weight:900;
+
+    letter-spacing:-0.06em;
+
+    color:#111;
+}
+/* =================================
+TABLET
+================================= */
+
+@media (max-width:1024px){
+
+    .story-wrapper{
+        height:250vh;
+    }
+
+    .story-sticky{
+        padding:0 8%;
+    }
+
+    .story-text{
+
+        font-size:38px;
+
+        line-height:1.5;
+
+        max-width:900px;
+
+        text-align:left;
+
+        letter-spacing:-0.03em;
+    }
+
+    .word{
+        filter:blur(1px);
+    }
+
+    .end-section h2{
+        font-size:clamp(3rem,7vw,5rem);
+    }
+}
+
+/* =================================
+TABLET
+================================= */
+
+@media (max-width:1024px){
+
+    .story-wrapper{
+        height:260vh;
+    }
+
+    .story-sticky{
+        padding:0 7%;
+    }
+
+    .story-text{
+
+        max-width:850px;
+
+        font-size:38px;
+
+        line-height:1.55;
+
+        letter-spacing:-0.03em;
+
+        text-align:left;
+
+    }
+
+    .word{
+
+        filter:blur(1px);
+
+    }
+
+}
+/* =================================
+MOBILE
+================================= */
+
+@media (max-width:767px){
+
+    .story-wrapper{
+
+        height:220vh;
+
+    }
+
+    .story-sticky{
+
+        padding:0 24px;
+
+        align-items:center;
+
+    }
+
+    .story-text{
+
+        max-width:100%;
+
+        font-size:28px;
+
+        line-height:1.7;
+
+        letter-spacing:-0.02em;
+
+        text-align:left;
+
+        font-weight:700;
+
+    }
+
+    .word{
+
+        opacity:.25;
+
+        filter:blur(1px);
+
+    }
+
+    .word.active{
+
+        opacity:1;
+
+        filter:none;
+
+    }
+
+}

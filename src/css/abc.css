@@ -1,0 +1,808 @@
+/* ==================================
+PORTFOLIO SECTION
+================================== */
+.portfolio-project.show .portfolio-image{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s ease;
+
+}
+
+.portfolio-project.show .portfolio-number{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s .15s ease;
+
+}
+
+.portfolio-project.show h3{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s .3s ease;
+
+}
+
+.portfolio-project.show h4{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s .45s ease;
+
+}
+
+.portfolio-project.show .portfolio-tags{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s .6s ease;
+
+}
+
+.portfolio-project.show p{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s .75s ease;
+
+}
+
+.portfolio-project.show .project-btn{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s .9s ease;
+
+}
+.portfolio-image,
+.portfolio-number,
+.portfolio-content h3,
+.portfolio-content h4,
+.portfolio-tags,
+.portfolio-content p,
+.project-btn{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+.portfolio-project{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    padding:35px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.9),
+            rgba(255,255,255,.65)
+        );
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.06),
+        0 25px 80px rgba(0,0,0,.08);
+
+    opacity:0;
+
+    transform:translateY(120px);
+
+    transition:
+        transform .8s cubic-bezier(.22,1,.36,1),
+        opacity .8s ease,
+        box-shadow .4s ease,
+        transform .4s ease;
+
+}
+.portfolio-project::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(141,1,0,.35),
+            transparent 35%,
+            transparent 65%,
+            rgba(141,1,0,.18)
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+.portfolio-project:hover{
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.08),
+
+        0 45px 90px rgba(141,1,0,.12);
+
+}
+.portfolio-project::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80%;
+
+    left:-70%;
+
+    width:220px;
+
+    height:220%;
+
+    background:
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.45),
+
+            transparent
+
+        );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+.portfolio-project:hover::after{
+
+    left:140%;
+
+}
+.portfolio-project.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+.portfolio-section{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:140px 8%;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(141,1,0,.05),
+            transparent 40%
+        ),
+        #f7f5f0;
+}
+
+/* ==================================
+HEADER
+================================== */
+
+.portfolio-header{
+
+    max-width:900px;
+
+    margin:auto;
+    margin-bottom:120px;
+
+    text-align:center;
+}
+
+.portfolio-subtitle{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:#fff5f5;
+
+    border:1px solid rgba(141,1,0,.12);
+
+    color:#8D0100;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+}
+
+.portfolio-title{
+
+    font-size:
+    clamp(3.5rem,8vw,7rem);
+
+    line-height:.95;
+
+    letter-spacing:-4px;
+
+    color:#111;
+
+    margin-bottom:25px;
+}
+
+.portfolio-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:2;
+
+    font-size:1rem;
+}
+
+/* ==================================
+PROJECT LIST
+================================== */
+
+.portfolio-projects{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:140px;
+}
+
+/* ==================================
+PROJECT
+================================== */
+
+.portfolio-project{
+
+    display:grid;
+
+    grid-template-columns:
+    1.2fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+/* Alternate Layout */
+
+.portfolio-project:nth-child(even){
+
+    grid-template-columns:
+    1fr 1.2fr;
+}
+
+.portfolio-project:nth-child(even)
+.portfolio-image{
+
+    order:2;
+}
+
+.portfolio-project:nth-child(even)
+.portfolio-content{
+
+    order:1;
+}
+
+/* ==================================
+IMAGE
+================================== */
+
+.portfolio-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+}
+
+.portfolio-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:30px;
+
+    transition:
+    transform .8s ease;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+}
+
+.portfolio-project:hover
+.portfolio-image img{
+
+    transform:
+    scale(1.05);
+}
+
+/* ==================================
+CONTENT
+================================== */
+
+.portfolio-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.portfolio-number{
+
+    font-size:6rem;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:
+    rgba(141,1,0,.12);
+
+    margin-bottom:15px;
+}
+
+.portfolio-content h3{
+
+    font-size:
+    clamp(2rem,4vw,3.5rem);
+
+    line-height:1.1;
+
+    color:#111;
+
+    margin-bottom:10px;
+}
+
+.portfolio-content h4{
+
+    color:#8D0100;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+/* ==================================
+TECH TAGS
+================================== */
+
+.portfolio-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:25px;
+}
+
+.portfolio-tags span{
+
+    padding:
+    10px 18px;
+
+    border-radius:999px;
+
+    background:white;
+
+    border:1px solid rgba(141,1,0,.15);
+
+    color:#8D0100;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.portfolio-tags span:hover{
+
+    background:#8D0100;
+
+    color:white;
+}
+
+/* ==================================
+DESCRIPTION
+================================== */
+
+.portfolio-content p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:30px;
+}
+
+/* ==================================
+BUTTON
+================================== */
+
+.portfolio-content button{
+
+    width:fit-content;
+
+    padding:
+    15px 30px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#8D0100;
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.portfolio-content button:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 15px 35px rgba(141,1,0,.25);
+}
+
+/* ==================================
+TABLET
+================================== */
+
+@media (max-width:1024px){
+
+.portfolio-section{
+
+    padding:110px 40px;
+
+}
+
+.portfolio-header{
+
+    margin-bottom:80px;
+
+}
+
+.portfolio-title{
+
+    font-size:4.5rem;
+
+    letter-spacing:-3px;
+
+}
+
+.portfolio-description{
+
+    max-width:700px;
+
+}
+
+.portfolio-project{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+}
+
+.portfolio-project:nth-child(even)
+.portfolio-image{
+
+    order:1;
+
+}
+
+.portfolio-project:nth-child(even)
+.portfolio-content{
+
+    order:2;
+
+}
+
+.portfolio-image{
+
+    max-width:700px;
+
+    margin:auto;
+
+    border-radius:28px;
+
+}
+
+.portfolio-image img{
+
+    border-radius:28px;
+
+}
+
+.portfolio-content{
+
+    text-align:center;
+
+    align-items:center;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.portfolio-number{
+
+    font-size:5rem;
+
+}
+
+.portfolio-content h3{
+
+    font-size:2.8rem;
+
+}
+
+.portfolio-content h4{
+
+    font-size:1.05rem;
+
+}
+
+.portfolio-content p{
+
+    max-width:650px;
+
+}
+
+.portfolio-tags{
+
+    justify-content:center;
+
+}
+
+.portfolio-content button{
+
+    padding:16px 34px;
+
+}
+
+.portfolio-projects{
+
+    gap:90px;
+
+}
+
+}
+/* ==================================
+MOBILE
+================================== */
+
+@media (max-width:767px){
+
+.portfolio-section{
+
+    padding:80px 18px;
+
+}
+
+.portfolio-header{
+
+    margin-bottom:55px;
+
+}
+
+.portfolio-subtitle{
+
+    font-size:.72rem;
+
+    padding:10px 18px;
+
+}
+
+.portfolio-title{
+
+    font-size:2.7rem;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+}
+
+.portfolio-description{
+
+    font-size:.92rem;
+
+    line-height:1.8;
+
+}
+
+.portfolio-projects{
+
+    gap:65px;
+
+}
+
+.portfolio-project{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.portfolio-image{
+
+    border-radius:0;
+
+}
+
+.portfolio-image img{
+
+    border-radius:0;
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    object-fit:cover;
+
+}
+
+.portfolio-content{
+
+    padding:24px;
+
+    text-align:left;
+
+    align-items:flex-start;
+
+}
+
+.portfolio-number{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.portfolio-content h3{
+
+    font-size:1.8rem;
+
+    line-height:1.2;
+
+}
+
+.portfolio-content h4{
+
+    font-size:.95rem;
+
+    margin-bottom:18px;
+
+}
+
+.portfolio-tags{
+
+    justify-content:flex-start;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+}
+
+.portfolio-tags span{
+
+    padding:8px 14px;
+
+    font-size:.78rem;
+
+}
+
+.portfolio-content p{
+
+    font-size:.92rem;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.portfolio-content button{
+
+    width:100%;
+
+    padding:16px;
+
+    text-align:center;
+
+}
+
+}
