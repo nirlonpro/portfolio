@@ -1,4 +1,4 @@
-import "../css/CertificatePage.css";
+import "../css/certificatepage.css";
 
 import cert1 from "../assets/image/certi/Coursera1.jpg";
 import cert2 from "../assets/image/certi/Coursera2.jpg";
