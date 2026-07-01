@@ -1,4 +1,5 @@
 import "../css/footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -34,7 +35,7 @@ function Footer() {
       </div>
 
       <div className="footer-divider"></div>
-<div id="ftitle"><h2>Quick Links</h2></div>
+      <div id="ftitle"><h2>Quick Links</h2></div>
       <div className="footer-links-wrapper">
         <span className="footer-tagline">
           <span>Nirlon Macwan</span> <br />
@@ -89,9 +90,9 @@ function Footer() {
             WhatsApp
           </a>
 
-          
 
-          
+
+
         </div>
 
         <div className="footer-group">
@@ -105,22 +106,14 @@ function Footer() {
             Projects
           </a> */}
 
-          <a
-            href="/biodata"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/biodata">
             About Myself
-          </a>
+          </Link>
 
-          <a
-            href="/CertificatePage"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/CertificatePage">
             Certificates
-          </a>
-          
+          </Link>
+         
         </div>
 
       </div>
