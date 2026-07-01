@@ -480,62 +480,512 @@
   position: relative;
   z-index: 1;
 }
+/* =====================================================
+   Large Laptop (1400px)
+===================================================== */
 
-/* ══════════════════════════════════════
-   RESPONSIVE — MOBILE
-══════════════════════════════════════ */
-@media (max-width: 992px) {
-  .bioPage {
-    grid-template-columns: 1fr;
+@media (max-width:1400px){
+
+  :root{
+    --sidebar-w:360px;
   }
 
-  .bioSidebar {
-    position: relative;
-    height: 70vh;
-    min-height: 480px;
+  .bioContent{
+    padding:70px 60px;
   }
 
-  .bioContact {
-    top: 20px;
-    left: 20px;
-    right: 20px;
+  .bioStorySection h2{
+    font-size:2.6rem;
   }
 
-  .bioName { font-size: 2.8rem; }
-
-  .bioContent {
-    padding: 48px 24px 60px;
+  .bioName{
+    font-size:3rem;
   }
 
-  .bioStorySection {
-    margin-bottom: 64px;
+}
+
+/* =====================================================
+   Laptop
+===================================================== */
+
+@media (max-width:1200px){
+
+  :root{
+    --sidebar-w:320px;
   }
 
-  .bioStorySection h2 { font-size: 2.2rem; }
-
-  .bioJourney { padding-left: 20px; }
-
-  .bioJourneyItem {
-    grid-template-columns: 1fr;
-    gap: 6px;
+  .bioContent{
+    padding:60px 45px;
   }
 
-  .bioFamilyGrid {
-    grid-template-columns: 1fr;
+  .bioStorySection{
+    margin-bottom:70px;
   }
 
-  .bioInfoRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+  .bioStorySection h2{
+    font-size:2.3rem;
   }
 
-  .bioInfoRow p { text-align: left; }
-
-  .bioClosingQuote p { font-size: 1.5rem; }
-
-  .ProfileImage {
-    width: 280px;
-    height: 360px;
+  .bioJourneyItem{
+    gap:20px;
   }
+
+  .bioFamilyGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .ProfileImage{
+    width:300px;
+    height:390px;
+  }
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media (max-width:992px){
+
+  .bioPage{
+    display:block;
+  }
+
+  .bioSidebar{
+
+    position:relative;
+
+    width:100%;
+    height:430px;
+
+  }
+
+  .bioHero{
+    height:430px;
+  }
+
+  .bioHeroImage{
+
+    object-fit:cover;
+    object-position:center top;
+
+  }
+
+  .bioContact{
+
+    top:18px;
+    left:18px;
+    right:18px;
+
+    padding:16px 18px;
+
+  }
+
+  .bioHeroContent{
+
+    padding:30px;
+
+  }
+
+  .bioName{
+
+    font-size:2.6rem;
+
+  }
+
+  .bioProfession{
+
+    font-size:.72rem;
+
+    letter-spacing:3px;
+
+  }
+
+  .bioContent{
+
+    max-width:100%;
+
+    padding:45px 30px 70px;
+
+  }
+
+  .bioStorySection{
+
+    margin-bottom:60px;
+
+  }
+
+  .bioStorySection h2{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+  }
+
+  .bioStorySection p{
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+  }
+
+  .bioInfoRow{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:6px;
+
+  }
+
+  .bioInfoRow p{
+
+    text-align:left;
+
+  }
+
+  .bioJourney{
+
+    padding-left:18px;
+
+  }
+
+  .bioJourneyItem{
+
+    grid-template-columns:1fr;
+
+    gap:8px;
+
+  }
+
+  .bioJourneyItem::before{
+
+    left:-24px;
+
+  }
+
+  .bioFamilyGrid{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .ProfileImage{
+
+    width:260px;
+    height:340px;
+
+  }
+
+  .bioClosingQuote{
+
+    padding-top:50px;
+
+  }
+
+  .bioClosingQuote p{
+
+    font-size:1.4rem;
+
+  }
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media (max-width:768px){
+
+  .bioSidebar{
+
+    height:360px;
+
+  }
+
+  .bioHero{
+
+    height:360px;
+
+  }
+
+  .bioContact{
+
+    left:12px;
+    right:12px;
+    top:12px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+  }
+
+  .bioContact h4{
+
+    font-size:.95rem;
+
+  }
+
+  .bioContact p{
+
+    font-size:.78rem;
+
+  }
+
+  .bioHeroContent{
+
+    padding:22px;
+
+  }
+
+  .bioName{
+
+    font-size:2rem;
+
+    line-height:1.1;
+
+  }
+
+  .bioProfession{
+
+    font-size:.68rem;
+
+    letter-spacing:2px;
+
+  }
+
+  .bioContent{
+
+    padding:35px 18px 60px;
+
+  }
+
+  .bioSectionTag{
+
+    font-size:.62rem;
+
+    letter-spacing:3px;
+
+  }
+
+  .bioStorySection h2{
+
+    font-size:1.7rem;
+
+  }
+
+  .bioStorySection p{
+
+    font-size:.9rem;
+
+    line-height:1.75;
+
+  }
+
+  .bioElegantInfo{
+
+    margin-top:25px;
+
+  }
+
+  .bioInfoRow{
+
+    padding:14px 0;
+
+  }
+
+  .bioJourney{
+
+    margin-top:30px;
+
+  }
+
+  .bioJourneyItem{
+
+    margin-bottom:28px;
+
+  }
+
+  .bioJourneyItem h4{
+
+    font-size:1.15rem;
+
+  }
+
+  .bioCareerBox{
+
+    padding:24px;
+
+    border-radius:16px;
+
+  }
+
+  .bioCareerBox h4{
+
+    font-size:1.3rem;
+
+  }
+
+  .bioFamilyGrid{
+
+    grid-template-columns:1fr;
+
+    gap:15px;
+
+  }
+
+  .bioFamilyCard{
+
+    padding:22px;
+
+  }
+
+  .bioTraits{
+
+    gap:10px;
+
+  }
+
+  .bioTraits div{
+
+    padding:10px 16px;
+
+    font-size:.8rem;
+
+  }
+
+  .ProfileImageFrame{
+
+    padding:8px;
+
+    border-radius:18px;
+
+  }
+
+  .ProfileImage{
+
+    width:220px;
+    height:290px;
+
+  }
+
+  .bioClosingQuote{
+
+    padding-top:35px;
+
+  }
+
+  .bioClosingQuote::before{
+
+    font-size:8rem;
+
+  }
+
+  .bioClosingQuote p{
+
+    font-size:1.15rem;
+
+    line-height:1.7;
+
+  }
+
+}
+
+/* =====================================================
+   Small Phones
+===================================================== */
+
+@media (max-width:480px){
+
+  .bioSidebar{
+
+    height:300px;
+
+  }
+
+  .bioHero{
+
+    height:300px;
+
+  }
+
+  .bioName{
+
+    font-size:1.6rem;
+
+  }
+
+  .bioProfession{
+
+    font-size:.6rem;
+
+    letter-spacing:2px;
+
+  }
+
+  .bioContact{
+
+    padding:12px;
+
+  }
+
+  .bioContent{
+
+    padding:25px 15px 45px;
+
+  }
+
+  .bioStorySection{
+
+    margin-bottom:45px;
+
+  }
+
+  .bioStorySection h2{
+
+    font-size:1.45rem;
+
+  }
+
+  .bioStorySection p{
+
+    font-size:.86rem;
+
+  }
+
+  .bioJourneyItem h4{
+
+    font-size:1rem;
+
+  }
+
+  .bioCareerBox{
+
+    padding:18px;
+
+  }
+
+  .bioFamilyCard{
+
+    padding:18px;
+
+  }
+
+  .ProfileImage{
+
+    width:180px;
+    height:240px;
+
+  }
+
+  .bioClosingQuote p{
+
+    font-size:1rem;
+
+  }
+
 }

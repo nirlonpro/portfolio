@@ -212,3 +212,518 @@
   font-size:.95rem;
   box-shadow:0 5px 15px rgba(0,0,0,.04);
 }
+/* ==========================================
+   1400px
+========================================== */
+
+@media (max-width:1400px){
+
+.certPremium{
+    padding:100px 6%;
+}
+
+.certHero h1{
+    font-size:4.2rem;
+}
+
+.certShowcase{
+    gap:40px;
+}
+
+.certDetails h2{
+    font-size:2.3rem;
+}
+
+}
+
+/* ==========================================
+   Laptop
+========================================== */
+
+@media (max-width:1200px){
+
+.certHero{
+    margin-bottom:80px;
+}
+
+.certHero h1{
+    font-size:3.5rem;
+}
+
+.certStats{
+    gap:18px;
+}
+
+.certStats div{
+    padding:30px;
+}
+
+.certContainer{
+    gap:90px;
+}
+
+.certShowcase{
+    gap:35px;
+}
+
+.certId{
+
+    width:75px;
+    height:75px;
+
+    font-size:1.3rem;
+
+}
+
+.certDetails h2{
+
+    font-size:2rem;
+
+}
+
+.certPreview img{
+
+    border-radius:20px;
+
+}
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width:992px){
+
+.certPremium{
+
+    padding:80px 25px;
+
+}
+
+.certHero{
+
+    margin-bottom:60px;
+
+}
+
+.certHero h1{
+
+    font-size:2.8rem;
+
+}
+
+.certHero p{
+
+    font-size:1rem;
+    line-height:1.8;
+
+}
+
+.certStats{
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-bottom:70px;
+
+}
+
+.certStats div{
+
+    padding:25px 15px;
+
+    border-radius:18px;
+
+}
+
+.certStats h2{
+
+    font-size:2rem;
+
+}
+
+.certContainer{
+
+    gap:70px;
+
+}
+
+.certShowcase,
+.certShowcase.reverse{
+
+    flex-direction:column;
+
+}
+
+.certDetails{
+
+    order:2;
+
+}
+
+.certPreview{
+
+    order:1;
+
+}
+
+.certDetails h2{
+
+    font-size:1.8rem;
+
+}
+
+.certDetails p{
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+.certMeta{
+
+    gap:10px;
+
+}
+
+.certMeta span{
+
+    font-size:.85rem;
+
+}
+
+.certSkills span{
+
+    font-size:.82rem;
+
+    padding:8px 15px;
+
+}
+
+.certHighlight{
+
+    font-size:.85rem;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width:768px){
+
+.certPremium{
+
+    padding:70px 18px;
+
+}
+
+.certSubTitle{
+
+    font-size:.75rem;
+
+    letter-spacing:3px;
+
+}
+
+.certHero{
+
+    margin-bottom:50px;
+
+}
+
+.certHero h1{
+
+    font-size:2.2rem;
+
+    margin:15px 0;
+
+}
+
+.certHero p{
+
+    font-size:.92rem;
+
+    line-height:1.7;
+
+}
+
+.certStats{
+
+    grid-template-columns:1fr;
+
+    gap:15px;
+
+    margin-bottom:55px;
+
+}
+
+.certStats div{
+
+    padding:22px;
+
+}
+
+.certStats h2{
+
+    font-size:2rem;
+
+}
+
+.certContainer{
+
+    gap:60px;
+
+}
+
+.certShowcase{
+
+    gap:25px;
+
+}
+
+.certDetails{
+
+    text-align:left;
+
+}
+
+.certId{
+
+    width:65px;
+    height:65px;
+
+    font-size:1.2rem;
+
+    margin-bottom:18px;
+
+}
+
+.certIssuer{
+
+    font-size:.8rem;
+
+    letter-spacing:1.5px;
+
+}
+
+.certDetails h2{
+
+    font-size:1.55rem;
+
+}
+
+.certDetails p{
+
+    font-size:.88rem;
+
+    line-height:1.7;
+
+}
+
+.certMeta{
+
+    gap:8px;
+
+}
+
+.certMeta span{
+
+    padding:8px 12px;
+
+    font-size:.75rem;
+
+}
+
+.certHighlights{
+
+    gap:10px;
+
+}
+
+.certHighlight{
+
+    padding:10px 14px;
+
+    font-size:.82rem;
+
+}
+
+.certSkills{
+
+    gap:8px;
+
+}
+
+.certSkills span{
+
+    padding:8px 12px;
+
+    font-size:.75rem;
+
+}
+
+.certPreview img{
+
+    padding:8px;
+
+    border-radius:18px;
+
+}
+
+}
+
+/* ==========================================
+   Small Phones
+========================================== */
+
+@media (max-width:480px){
+
+.certPremium{
+
+    padding:60px 14px;
+
+}
+
+.certHero h1{
+
+    font-size:1.8rem;
+
+}
+
+.certHero p{
+
+    font-size:.85rem;
+
+}
+
+.certStats div{
+
+    padding:18px;
+
+}
+
+.certStats h2{
+
+    font-size:1.6rem;
+
+}
+
+.certId{
+
+    width:55px;
+    height:55px;
+
+    font-size:1rem;
+
+}
+
+.certDetails h2{
+
+    font-size:1.3rem;
+
+}
+
+.certDetails p{
+
+    font-size:.82rem;
+
+}
+
+.certHighlight{
+
+    font-size:.75rem;
+
+    padding:8px 10px;
+
+}
+
+.certSkills span{
+
+    font-size:.7rem;
+
+    padding:7px 10px;
+
+}
+
+.certMeta span{
+
+    font-size:.7rem;
+
+    padding:7px 10px;
+
+}
+
+.certPreview img{
+
+    border-radius:15px;
+
+}
+
+}
+.certShowcase{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+.certStats div,
+.certHighlight,
+.certSkills span,
+.certPreview img{
+
+transition:.35s ease;
+
+}
+
+.certStats div:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.certPreview img:hover{
+
+transform:scale(1.02) rotate(.5deg);
+
+}
+
+.certHighlight:hover{
+
+transform:translateX(6px);
+
+}
+
+.certSkills span:hover{
+
+transform:translateY(-3px);
+
+}
