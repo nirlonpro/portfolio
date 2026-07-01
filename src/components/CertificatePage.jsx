@@ -1,5 +1,5 @@
 import "../css/certificatepage.css";
-
+import { useNavigate } from "react-router-dom";
 import cert1 from "../assets/image/certi/Coursera1.jpg";
 import cert2 from "../assets/image/certi/Coursera2.jpg";
 import cert3 from "../assets/image/certi/certi_1.png";
@@ -116,9 +116,19 @@ const certificates = [
 ];
 
 function CertificatePage() {
+    const navigate = useNavigate();
+
+    const handleBack = () => {
+        navigate("/#footer");
+    };
     return (
         <section className="certPremium">
-
+            <button
+                className="bioBackBtn"
+                onClick={handleBack}
+            >
+                ← Back to Footer
+            </button>
             <div className="certHero">
 
                 <span className="certSubTitle">

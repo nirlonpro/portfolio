@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer id=""className="footer">
 
       <div className="footer-header">
 
@@ -41,7 +41,7 @@ function Footer() {
           <span>Nirlon Macwan</span> <br />
           Building Scalable Products & Meaningful Digital Experiences.
         </span>
-        <div className="footer-group">
+        <div id="footer" className="footer-group">
           <h3>SOCIAL LINKS</h3>
 
           <a

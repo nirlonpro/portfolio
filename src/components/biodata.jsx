@@ -1,10 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import "../css/biodata.css";
 import Nirlon from "../assets/image/ni.png";
 
 function MarriageBio() {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/#footer");
+  };
   return (
     <section className="bioPage">
-
+      <button
+        className="bioBackBtn"
+        onClick={handleBack}
+      >
+        ← Back to Footer
+      </button>
       {/* ── LEFT SIDEBAR — full-bleed portrait panel ── */}
 
       <aside className="bioSidebar">
